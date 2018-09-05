@@ -1,0 +1,20 @@
+# 应用名称、默认profile
+spring:
+  application:
+    name: dubbo-consumer
+  profiles:
+    active: dev
+  main:
+    banner-mode: log
+
+# Server
+server:
+  port: 8701
+
+# dubbo
+dubbo:
+  application:
+    name: dubbo-consumer
+  registry:
+    address: zookeeper://127.0.0.1:2181?client=curator
+  scan: org.jim.dubbo.service
